@@ -5,3 +5,20 @@
     max-width: 300px;
     margin: 20px 0;
 }
+.logo-area nav{
+    background: #000;
+    padding: 2px 0;
+}
+.logo-area nav a{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+
+}
+.logo-area nav a:hover, .logo-area nav a.active{
+    background: #fff;
+    color: #000;
+}
