@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Products from "../../fakeData/products.json";
+import Product from "../Product/Product"
 import "./shop.css";
 
 const Shop = () => {
@@ -12,14 +13,15 @@ const Shop = () => {
     return (
         <div>
             <div className="flex">
-                <div className="w-90 p-4">
+                <div className="w-80 p-4">
                     <ul>
                         {products.map((pd) => (
-                            <li>{pd.name}</li>
+                            
+                            <Product prd={pd}></Product>
                         ))}
                     </ul>
                 </div>
-                <div className="w-10 p-4"></div>
+                <div className="w-20 p-4"></div>
             </div>
         </div>
     );
