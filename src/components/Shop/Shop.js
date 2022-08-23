@@ -5,9 +5,16 @@ import "./shop.css";
 
 const Shop = () => {
     const [products, setproducts] = useState([]);
+    const [cart, setCart] = useState([]);
+    const handleProduct = (product) => {
+        console.log("product added,",product);
+        const newCart = [...cart, product];
+        setCart(newCart);
+    }
     useEffect(() => {
         const allProducts = Products.slice(0, 10);
         setproducts(allProducts);
+
     }, []);
 
     return (
@@ -17,11 +24,16 @@ const Shop = () => {
                     <ul>
                         {products.map((pd) => (
                             
-                            <Product prd={pd}></Product>
+                            <Product handleProduct = {handleProduct} prd={pd}></Product>
                         ))}
                     </ul>
                 </div>
-                <div className="w-20 p-4"></div>
+                <div className="w-20 p-4">
+                    <div className="text-center">
+                        <h3>Order Summary</h3>
+                        <h5>Items added: <strong>{cart.length}</strong></h5>
+                    </div>
+                </div>
             </div>
         </div>
     );
