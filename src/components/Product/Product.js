@@ -1,26 +1,24 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid, regular, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-
-
-import "./products.css"
+import "./products.css";
 
 const Products = (props) => {
     return (
-        <div className='single-product'>
-            <div className='image'>
+        <div className="single-product">
+            <div className="image">
                 <img src={props.prd.img} alt="" />
             </div>
-            <div className='content'>
+            <div className="content">
                 <a href="#">{props.prd.name}</a>
                 <p>by:{props.prd.seller}</p>
-                <div className='left-half'>
+                <div className="left-half">
                     <p>${props.prd.price}</p>
                     <p>Only {props.prd.stock} left today. Order now.</p>
                 </div>
-                <div className='right-half'></div>
-                <button type='button'>Add to cart</button>
-                <FontAwesomeIcon icon={('coffee')} />
+                <div className="right-half"></div>
+                <button type="button">Add to cart</button>
             </div>
         </div>
     );
