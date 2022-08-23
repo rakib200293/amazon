@@ -21,12 +21,12 @@ const Shop = () => {
         <div>
             <div className="flex">
                 <div className="w-80 p-4">
-                    <ul>
+                    <div className="all-pruducts">
                         {products.map((pd) => (
                             
                             <Product handleProduct = {handleProduct} prd={pd}></Product>
                         ))}
-                    </ul>
+                    </div>
                 </div>
                 <div className="w-20 p-4">
                     <div className="text-center">
